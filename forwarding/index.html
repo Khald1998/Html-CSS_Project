@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #f1f1f1;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    p {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Redirecting...</h1>
+  <p>You will be redirected to my new <a href="https://khaledz.dev/">Domain</a> in <span id="countdown">5</span> seconds.</p>
+
+  <script>
+    // Countdown timer
+    var seconds = 5;
+    var countdownElement = document.getElementById("countdown");
+
+    function countdown() {
+      seconds--;
+      countdownElement.textContent = seconds;
+
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = "https://khaledz.dev/";
+      }
+    }
+
+    var timer = setInterval(countdown, 1000);
+  </script>
+</body>
+</html>
